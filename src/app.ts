@@ -177,7 +177,7 @@ app.use(async function mysqlConnection(ctx, next) {
 
 
 // PUBLIC ROUTES
-// app.use(require('./routes/root.route'));
+app.use(require('./routes/root.route'));
 // app.use(require('./routes/messages.route.ts'));
 
 /* create server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
@@ -186,7 +186,8 @@ app.listen(process.env.PORT || 3000);
 console.info(
   `${process.version} listening on port ${process.env.PORT || 3000} (${
     app.env
-  }/${config.database})`
+  }/${config.database}) 
+  http://localhost:${process.env.PORT || 3000}`
 );
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
