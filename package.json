@@ -1,0 +1,31 @@
+{
+  "name": "email-web-app-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "nodemon src/app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicholasGiffen/email-web-app-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicholasGiffen/email-web-app-backend/issues"
+  },
+  "homepage": "https://github.com/NicholasGiffen/email-web-app-backend#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "mysql2": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.3"
+  }
+}
