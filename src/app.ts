@@ -174,11 +174,18 @@ app.use(async function mysqlConnection(ctx, next) {
 //   }
 //   await next();
 // });
-
+app.use(async function (ctx, next) {
+    await next();
+    ctx.body = {
+      status: 200,
+      body: ctx.body
+    };
+   });
+   
 
 // PUBLIC ROUTES
 app.use(require('./routes/root.route'));
-// app.use(require('./routes/messages.route.ts'));
+app.use(require('./routes/messages.route.ts'));
 
 /* create server - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
